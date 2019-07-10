@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Web_upload_download</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+   <!-- 上传 -->
+   <servlet>
+   <description></description>
+   <display-name>UpLoadServlet</display-name>
+   <servlet-name>UpLoadServlet</servlet-name>
+   <servlet-class>com.whr.servlet.UpLoadServlet</servlet-class>
+   <init-param>
+   	<param-name>path</param-name>
+   	<param-value>/upload</param-value>
+   </init-param>
+   </servlet>
+  <servlet-mapping>
+    <servlet-name>UpLoadServlet</servlet-name>
+    <url-pattern>/UpLoadServlet</url-pattern>
+  </servlet-mapping>
+  <!--下载 -->
+     <servlet>
+   <description></description>
+   <display-name>DownLoadServlet</display-name>
+   <servlet-name>DownLoadServlet</servlet-name>
+   <servlet-class>com.whr.servlet.DownLoadServlet</servlet-class>
+   <init-param>
+   	<param-name>path</param-name>
+   	<param-value>/download</param-value>
+   </init-param>
+   </servlet>
+  <servlet-mapping>
+    <servlet-name>DownLoadServlet</servlet-name>
+    <url-pattern>/DownLoadServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
