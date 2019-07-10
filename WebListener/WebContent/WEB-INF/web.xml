@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>WebListener</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- <listener>
+  	<listener-class>com.whr.listener.MyFirstListener</listener-class>
+  </listener>
+  <listener>
+  	<listener-class>com.whr.listener.MySecondListener</listener-class>
+  </listener> -->
+  
+  <context-param>
+  	<param-name>app_name</param-name>
+  	<param-value>Listener_Web</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>version</param-name>
+  	<param-value>1.0</param-value>
+  </context-param>
+  
+  <listener>
+  	<listener-class>com.whr.listener.MyServletContextListener</listener-class>
+  </listener>
+  <listener>
+  	<listener-class>com.whr.listener.MyHttpSessionListener</listener-class>
+  </listener>
+  <listener>
+  	<listener-class>com.whr.listener.MyServletRequestListener</listener-class>
+  </listener>
+  <listener>
+  	<listener-class>com.whr.listener.MyServletContextAttributeListener</listener-class>
+  </listener>
+  
+  <session-config>
+  	<session-timeout>1</session-timeout>
+  </session-config>
+  
+</web-app>
